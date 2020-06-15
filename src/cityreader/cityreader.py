@@ -104,5 +104,3 @@ def cityreader_stretch(lat1, lon1, lat2, lon2, cities=[]):
             within.append(city)
 
     return within
-
-
