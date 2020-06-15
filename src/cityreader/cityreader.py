@@ -11,7 +11,7 @@ class City:
         self.lon = lon
 
     def __str__(self):
-        return f'({self.name}, {self.lat}, {self.lon})'
+        return f"({self.name}, {self.lat}, {self.lon})"
 
 
 # We have a collection of US cities with population over 750,000 stored in the
@@ -42,9 +42,9 @@ def cityreader(cities=[]):
         next(spamreader)
 
         for row in spamreader:
-            cities.append(City(row[0], row[3], row[4]))
-
-        csvfile.close()
+            cities.append(City(row[0], float(row[3]), float(row[4])))
+    
+    csvfile.close()
 
     return cities
 
